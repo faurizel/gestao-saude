@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Consulta Médica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .appointment-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+        input[type="text"], input[type="date"], input[type="time"], select {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .back-link {
+            margin-top: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="appointment-container">
+        <h2>Agendamento de Consulta Médica</h2>
+        <form action="/schedule-appointment" method="post">
+            <input type="text" name="fullname" placeholder="Nome Completo" required><br>
+            <input type="text" name="cpf" placeholder="CPF" required><br>
+            <select name="doctor" required>
+                <option value="">Selecione o Médico</option>
+                <option value="dr_silva">Dr. Silva - Cardiologista</option>
+                <option value="dr_maria">Dra. Maria - Clínico Geral</option>
+                <option value="dr_joao">Dr. João - Dermatologista</option>
+            </select><br>
+            <input type="date" name="appointment_date" required><br>
+            <input type="time" name="appointment_time" required><br>
+            <input type="submit" value="Agendar Consulta">
+        </form>
+        <div class="back-link">
+            <p><a href="/dashboard">Voltar ao Dashboard</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

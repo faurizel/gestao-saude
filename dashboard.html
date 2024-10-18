@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #28a745;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .dashboard-menu {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .dashboard-menu h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .dashboard-menu a {
+            display: block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .dashboard-menu a:hover {
+            background-color: #0056b3;
+        }
+        .logout-btn {
+            background-color: #dc3545;
+        }
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Bem-vindo ao Sistema de Gestão</h1>
+    </div>
+
+    <div class="container">
+        <div class="dashboard-menu">
+            <h2>Dashboard</h2>
+            <a href="/schedule-appointment">Agendar Consulta</a>
+            <a href="/my-appointments">Minhas Consultas</a>
+            <a href="/profile">Meu Perfil</a>
+            <a href="/support">Suporte</a>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+</body>
+</html>
